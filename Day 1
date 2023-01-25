@@ -1,0 +1,86 @@
+Write a blog on Difference between HTTP1.1 vs HTTP2
+
+HTTP (Hypertext Transfer Protocol) is the foundation of data communication on the internet.
+
+It is a set of rules that dictate how data is transferred between web browsers and servers. 
+
+In this blog post, we will be discussing the differences between HTTP1.1 and HTTP2, the two most widely used versions of HTTP.
+
+
+HTTP1.1 is the first version of HTTP that was widely adopted and is still in use today. 
+
+It was first standardized in 1999 and is the default protocol for most web browsers and servers.
+
+One of the key features of HTTP1.1 is that it uses a request-response model for data transfer. 
+
+This means that a client (such as a web browser) sends a request to a server and the server responds with the requested data.
+
+
+
+HTTP2, on the other hand, was released in 2015 as an improvement over HTTP1.1. It was designed to address some of the limitations of HTTP1.1,
+
+such as slow page load times and the need for multiple connections to download a single webpage.
+
+Some of the key differences between HTTP1.1 and HTTP2 include:
+
+
+
+Multiplexing: HTTP/1.1 loads resources one after the other, so if one resource cannot be loaded,
+
+it blocks all the other resources behind it. In contrast, 
+
+HTTP/2 is able to use a single TCP connection to send multiple streams of data at once so that no one resource blocks any other resource.
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+Write a blog about objects and its internal representation in Javascript
+
+
+
+
+In JavaScript, objects are a fundamental data type that are used to store and organize data. 
+
+They are similar to dictionaries in Python or HashMap in Java, and are used to store collections of key-value pairs. 
+
+In this blog post, we will be discussing the internal representation of objects in JavaScript and how they are used to store and organize data.
+
+In JavaScript, objects are implemented as a hash table, which is a collection of key-value pairs.
+
+Each key is a string and each value can be any data type, such as a number, string, or even another object.
+
+Objects are created using the object literal notation, which is a set of curly braces {}. 
+
+The key-value pairs are separated by a colon and each pair is separated by a comma.
+
+
+example, the following code creates an object with two key-value pairs:
+
+let person = {
+    name: "Krishna",
+    age: 23
+};
+
+
+console.log(person.name); // "Krishna"
+
+
+///////////////////// " You can also add, modify and delete properties of an object using the dot notation or the bracket notation "  \\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+person.address = "Vellore";
+person["phoneNumber"] = "9876543210";
+delete person.age;
+
+
+
+
+
+
+
+
