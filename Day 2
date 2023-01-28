@@ -1,0 +1,9 @@
+
+The document object represents the HTML or XML document that the JavaScript code is running on. 
+It provides properties and methods for accessing and manipulating the content and structure of the document.
+
+The window object represents the browser window or tab that the JavaScript code is running in.
+It provides properties and methods for interacting with the browser, such as manipulating the browser's history,
+displaying dialog boxes, and accessing the document object.
+
+In general, the document object is used for interacting with the content of the web page, while the window object is used for interacting with the browser itself.
