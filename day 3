@@ -1,0 +1,26 @@
+let JSON = {
+  name: "Krishna",
+  age: 25,
+  city: "Vellore"
+};
+
+// Using for loop
+for (let i = 0; i < Object.keys(JSON).length; i++) {
+  console.log(Object.keys(JSON)[i], ":", JSON[Object.keys(JSON)[i]]);
+}
+
+// Using for...in loop
+for (let key in JSON) {
+  console.log(key, ":", JSON[key]);
+}
+
+// Using for...of loop (for arrays)
+let JSONArray = Object.values(JSON);
+for (let value of JSONArray) {
+  console.log(value);
+}
+
+// Using forEach (for arrays)
+JSONArray.forEach(function(value) {
+  console.log(value);
+});
