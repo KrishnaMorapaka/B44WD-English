@@ -1,262 +1,317 @@
-Do the below programs in anonymous function & IIFE
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/////////////////////////////////// Print odd numbers in an array/////////////////////////////////// 
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////1)   Print odd numbers in an array/////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-// Getting input via STDIN
-const readline = require("readline");
-
-const inp = readline.createInterface({
-  input: process.stdin
+        /////////////////////////////////// Anonymous function///////////////////////////////////////////
+        var arr = [1,2,3,4,5];
+arr.forEach(function(element) {
+  if (element % 2 !== 0) {
+    console.log(element);
+  }
 });
 
-const userInput = [];
+///////////////////////////////////////////// IIFE///////////////////////////////////////////
 
-inp.on("line", (data) => {
-  userInput.push(data);
-});
 
-inp.on("close", () => {
-  //start-here
-  //Your code goes here … replace the below line with your code logic 
 
-  var arr = [1,2,3,4,5,6,7,8,9];
+
 
 (function() {
-  var oddArr = arr.filter(function(num) {
-    return num % 2 !== 0;
+  var arr = [1,2,3,4,5];
+  arr.forEach(function(element) {
+    if (element % 2 !== 0) {
+      console.log(element);
+    }
   });
-  console.log(oddArr);
 })();
 
-  //end-here
+
+
+//////////Convert all the strings to title caps in a string array/////////////////////////////////////////
+
+
+///////////////////////////////////////// Anonymous function/////////////////////////////////////////////
+var arr = ['hello', 'world'];
+var result = arr.map(function(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
 });
- 
- 
- 
- 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////2)   Convert all the strings to title caps in a string array/////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+console.log(result);
 
+/////////////////////////////////////////////// IIFE////////////////////////////////////////////////////
 
-
-
-// Getting input via STDIN
-const readline = require("readline");
-
-const inp = readline.createInterface({
-  input: process.stdin
-});
-
-const userInput = [];
-
-inp.on("line", (data) => {
-  userInput.push(data);
-});
-
-inp.on("close", () => {
-  //start-here
-  //Your code goes here … replace the below line with your code logic 
-
- var arr = [1,2,3,4,5,6,7,8,9];
-
-(function(arr) {
-  var oddArr = arr.filter(function(num) {
-    return num % 2 !== 0;
-  });
-  console.log(oddArr);
-})(arr);
-  //end-here
-});
-
-
-
-
-
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////3)   Sum of all numbers in an array/////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// Getting input via STDIN
-const readline = require("readline");
-
-const inp = readline.createInterface({
-  input: process.stdin
-});
-
-const userInput = [];
-
-inp.on("line", (data) => {
-  userInput.push(data);
-});
-
-inp.on("close", () => {
-  //start-here
-  //Your code goes here … replace the below line with your code logic 
-
-var strArr = ['hello', 'world', 'javascript'];
 
 (function() {
-  var titleArr = strArr.map(function(str) {
+  var arr = ['hello', 'world'];
+  var result = arr.map(function(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
   });
-  console.log(titleArr);
+  console.log(result);
 })();
-  //end-here
-});
+
+/////////////////////////////////////////Sum of all numbers in an array/////////////////////////////////////////
+
+///////////////////////////////////////// Anonymous function/////////////////////////////////////////////
 
 
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////4)   Return all the prime numbers in an array/////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+var arr = [1,2,3,4,5];
+var sum = arr.reduce(function(total, num) {
+  return total + num;
+}, 0);
+console.log(sum);
 
-// Getting input via STDIN
-const readline = require("readline");
-
-const inp = readline.createInterface({
-  input: process.stdin
-});
-
-const userInput = [];
-
-inp.on("line", (data) => {
-  userInput.push(data);
-});
-
-inp.on("close", () => {
-  //start-here
-  //Your code goes here … replace the below line with your code logic 
-
-var strArr = ['hello', 'world', 'javascript'];
-
-(function(strArr) {
-  var titleArr = strArr.map(function(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  });
-  console.log(titleArr);
-})(strArr);
-  //end-here
-});
+/////////////////////////////////////////////// IIFE////////////////////////////////////////////////////
 
 
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////5)   Return all the palindromes in an array///////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-// Getting input via STDIN
-const readline = require("readline");
-
-const inp = readline.createInterface({
-  input: process.stdin
-});
-
-const userInput = [];
-
-inp.on("line", (data) => {
-  userInput.push(data);
-});
-
-inp.on("close", () => {
-  //start-here
-  //Your code goes here … replace the below line with your code logic 
-
-var numArr = [1,2,3,4,5];
 
 (function() {
-  var sum = numArr.reduce(function(acc, num) {
-    return acc + num;
+  var arr = [1,2,3,4,5];
+  var sum = arr.reduce(function(total, num) {
+    return total + num;
   }, 0);
   console.log(sum);
 })();
-  //end-here
+
+
+///////////////////////////////////////////////Return all the prime numbers in an array///////////////////////
+
+
+
+/////////////////////////////////////////////// Anonymous function////////////////////////////////////////////////////
+var arr = [2, 3, 4, 5, 6, 7, 8, 9, 10];
+var result = arr.filter(function(num) {
+  for (var i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return num !== 1;
 });
+console.log(result);
+
+/////////////////////////////////////////////// IIFE////////////////////////////////////////////////////
 
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////6)  Return median of two sorted arrays of the same size.///////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-// Getting input via STDIN
-const readline = require("readline");
-
-const inp = readline.createInterface({
-  input: process.stdin
-});
-
-const userInput = [];
-
-inp.on("line", (data) => {
-  userInput.push(data);
-});
-
-inp.on("close", () => {
-  //start-here
-  //Your code goes here … replace the below line with your code logic 
-
-var numArr = [1,2,3,4,5];
-
-(function(numArr) {
-  var sum = numArr.reduce(function(acc, num) {
-    return acc + num;
-  }, 0);
-  console.log(sum);
-})(numArr);
-  //end-here
-});
-
-
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////7)  Remove duplicates from an array//////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-// Getting input via STDIN
-const readline = require("readline");
-
-const inp = readline.createInterface({
-  input: process.stdin
-});
-
-const userInput = [];
-
-inp.on("line", (data) => {
-  userInput.push(data);
-});
-
-inp.on("close", () => {
-  //start-here
-  //Your code goes here … replace the below line with your code logic 
-
-var numArr = [1,2,3,4,5,6,7,8,9];
 
 (function() {
-  var primeArr = numArr.filter(function(num) {
-    for(var i = 2; i < num; i++) {
-      if(num % i === 0) {
+  var arr = [2, 3, 4, 5, 6, 7, 8, 9, 10];
+  var result = arr.filter(function(num) {
+    for (var i = 2; i < num; i++) {
+      if (num % i === 0) {
         return false;
       }
     }
     return num !== 1;
   });
-  console.log(primeArr);
+  console.log(result);
 })();
-  //end-here
+
+
+//////////////////////////////////////Return all the palindromes in an array///////////////////////////////
+/////////////////////////////////////////////// Anonymous function////////////////////////////////////////////////////
+
+
+
+var arr = ['hello', 'world', 'level'];
+var result = arr.filter(function(str) {
+  return str === str.split('').reverse().join('');
 });
+console.log(result);
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////8)  Rotate an array by k times//////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+/////////////////////////////////////////////// IIFE////////////////////////////////////////////////////
 
 
+
+(function() {
+  var arr = ['hello', 'world', 'level'];
+  var result = arr.filter(function(str) {
+    return str === str.split('').reverse().join('');
+  });
+  console.log(result);
+})();
+
+/////////////////////////////////Return median of two sorted arrays of the same size////////////////////////
+
+
+/////////////////////////////////////////////// Anonymous function////////////////////////////////////////////////////
+
+
+var arr1 = [1, 3, 5];
+var arr2 = [2, 4, 6];
+var findMedian = function(arr1, arr2) {
+  var combined = arr1.concat(arr2).sort(function(a, b) {
+    return a - b;
+  });
+  var midIndex = Math.floor(combined.length / 2);
+  if (combined.length % 2 === 0) {
+    return (combined[midIndex - 1] + combined[midIndex]) / 2;
+  } else {
+    return combined[midIndex];
+  }
+};
+console.log(findMedian(arr1, arr2));
+
+/////////////////////////////////////////////// IIFE////////////////////////////////////////////////////
+
+
+
+
+(function() {
+  var arr1 = [1, 3, 5];
+  var arr2 = [2, 4, 6];
+  var findMedian = function(arr1, arr2) {
+    var combined = arr1.concat(arr2).sort(function(a, b) {
+      return a - b;
+    });
+    var midIndex = Math.floor(combined.length / 2);
+    if (combined.length % 2 === 0) {
+      return (combined[midIndex - 1] + combined[midIndex]) / 2;
+    } else {
+      return combined[midIndex];
+    }
+  };
+  console.log(findMedian(arr1, arr2));
+})();
+
+
+
+/////////////////////////////////////Remove duplicates from an array//////////////////////////////////////
+
+
+/////////////////////////////////////////// Anonymous function//////////////////////////////////////////
+var arr = [1, 2, 3, 1, 2];
+var result = arr.filter(function(item, index) {
+  return arr.indexOf(item) === index;
+});
+console.log(result);
+
+
+/////////////////////////////////////////////////// IIFE//////////////////////////////////////////////////
+
+
+
+(function() {
+  var arr = [1, 2, 3, 1, 2];
+  var result = arr.filter(function(item, index) {
+    return arr.indexOf(item) === index;
+  });
+  console.log(result);
+})();
+
+////////////////////////////////////////Rotate an array by k times///////////////////////////////////////
+
+/////////////////////////////////////////// Anonymous function//////////////////////////////////////////
+
+
+var arr = [1, 2, 3, 4, 5];
+var rotate = function(arr, k) {
+  for (var i = 0; i < k; i++) {
+    arr.unshift(arr.pop());
+  }
+  return arr;
+};
+console.log(rotate(arr, 2));
+
+/////////////////////////////////////////////////// IIFE//////////////////////////////////////////////////
+(function() {
+  var arr = [1, 2, 3, 4, 5];
+  var rotate = function(arr, k) {
+    for (var i = 0; i < k; i++) {
+      arr.unshift(arr.pop());
+    }
+    return arr;
+  };
+  console.log(rotate(arr, 2));
+})();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ///////////////////////////////////Print odd numbers in an array//////////////////////////////////
+        
+       
+       /////////////////////////////////////// Arrow function////////////////////////////////////////
+                    
+       
+                   const arr = [1, 2, 3, 4, 5];
+                   const result = arr.filter(num => num % 2 !== 0);
+                    console.log(result);
+
+                    
+                    /////////////////////////// Convert all the strings to title caps in a string array://////////////////////
+               
+           /////////////////////////////////////// Arrow function////////////////////////////////////////
+
+
+                       const arr = ['hello', 'world'];
+                       const result = arr.map(str => str.charAt(0).toUpperCase() + str.slice(1));
+                       console.log(result);
+
+
+
+//////////////////////////////////////////Sum of all numbers in an array/////////////////////////////                         
+
+
+/////////////////////////////////////////// Arrow function//////////////////////////////////////////
+                                   
+                                  const arr = [1, 2, 3, 4, 5];
+                                  const result = arr.reduce((sum, num) => sum + num, 0);
+                                 console.log(result)
+         
+                                    
+/////////////////////////Return all the prime numbers in an array/////////////////////////////////
+
+
+/////////////////////////////////////////// Arrow function//////////////////////////////////////////
+                            const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+                            const result = arr.filter(num => {
+                            if (num <= 1) return false;
+                            for (let i = 2; i < num; i++) {
+                                if (num % i === 0) return false;
+                            }
+                            return true;
+                            });
+                            console.log(result);
+
+
+/////////////////////////////////////////Return all the palindromes in an array////////////////////////
+
+
+/////////////////////////////////////////// Arrow function//////////////////////////////////////////
+
+
+
+               const arr = ['hello', 'world', 'level'];
+               const result = arr.filter(str => str === str.split('').reverse().join(''));
+               console.log(result);
+               
+               
+               
+               
+               
+               
+               
+               
+    </script>
+</body>
+</html>
