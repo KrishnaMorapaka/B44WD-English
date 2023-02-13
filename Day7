@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        /////////////////////Get all the countries from the Asia continent /region using the Filter function///////////////
+        
+                                        fetch("https://restcountries.com/v3.1/all")
+                                  .then(response => response.json())
+                                  .then(data => {
+                                    const asianCountries = data.filter(country => country.region === "Asia");
+                                    console.log(asianCountries);
+                                  });
+  
+
+
+
+
+  ///////////////////////////Get all the countries with a population of less than 2 lakhs using Filter function//////////////////////////
+
+
+
+                                                      fetch("https://restcountries.com/v3.1/all")
+                                                      .then(response => response.json())
+                                                      .then(data => {
+                                                        const lowPopulationCountries = data.filter(
+                                                          country => country.population < 200000
+                                                        );
+                                                        console.log(lowPopulationCountries);
+                                                      });
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////Print the following details name, capital, flag using forEach function////////////////////////////
+
+                                        fetch("https://restcountries.com/v3.1/all")
+                                        .then(response => response.json())
+                                        .then(data => {
+                                            data.forEach(country => {
+                                            console.log(`Name: ${country.name}`);
+                                            console.log(`Capital: ${country.capital}`);
+                                            console.log(`Flag: ${country.flag}`);
+                                            });
+                                        });
+////////////////////////////////////////Print the total population of countries using reduce function//////////////////////////////////
+
+                                        fetch("https://restcountries.com/v3.1/all")
+                                        .then(response => response.json())
+                                        .then(data => {
+                                            const totalPopulation = data.reduce((sum, country) => sum + country.population, 0);
+                                            console.log(`Total population: ${totalPopulation}`);
+                                        });
+
+
+
+
+////////////////////////////////////////////////////////////Print the country which uses US Dollars as currency/////////////////////////////////
+
+
+    </Script>
+</body>
+</html>
