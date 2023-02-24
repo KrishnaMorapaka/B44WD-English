@@ -41,3 +41,63 @@ console.log(person1.toString());
     </Script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                            class UberPriceCalculator {
+                    constructor(distance, time, serviceType) {
+                        this.distance = distance;
+                        this.time = time;
+                        this.serviceType = serviceType;
+                    }
+
+                    calculatePrice() {
+                        const baseFare = 2.5;
+                        const costPerMile = 1.5;
+                        const costPerMinute = 0.25;
+                        const bookingFee = 1.5;
+
+                        let totalCost = baseFare;
+                        totalCost += this.distance * costPerMile;
+                        totalCost += this.time * costPerMinute;
+                        totalCost += bookingFee;
+
+                        if (this.serviceType === 'uberXL') {
+                        totalCost *= 1.2;
+                        } else if (this.serviceType === 'uberBlack') {
+                        totalCost *= 1.5;
+                        }
+
+                        return totalCost.toFixed(2);
+                    }
+                    }
+
+                    const calculator = new UberPriceCalculator(10, 25, 'uberX');
+                    const price = calculator.calculatePrice();
+                    console.log(price); 
+    </script>
+</body>
+</html>
